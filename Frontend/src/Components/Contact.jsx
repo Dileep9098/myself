@@ -14,7 +14,7 @@ export default function Contact() {
     const [phone, setPhone] = useState()
 
     const [loading, setLoading] = useState(false)
-    const [successMsg, setSuccessMsg] = useState(false)
+    const [successMsg, setSuccessMsg] = useState(null)
 
     const [ename, setEname] = useState('')
 
@@ -72,30 +72,57 @@ export default function Contact() {
         formData.append('phone', phone)
         formData.append('message', message)
 
+        // try {
+        //     setLoading(true)
+
+        //     // const response = await axios.post(`${window.location.origin}/api/v1`, { name, email, subject, message, phone })
+        //     const response = await axios.post("https://myself-api.vercel.app/api/v1", { name, email, subject, message, phone })
+        //     console.log(response.data)
+        //     setLoading(false)
+
+        //     if (response.data.success === true) {
+        //         setSuccessMsg(!successMsg)
+
+        //         setTimeout(() => {
+        //             setSuccessMsg(false)
+        //         }, 3000)
+
+
+
+        //     } else {
+        //         console.log("Something went wrong")
+        //     }
+
+        // } catch (error) {
+        //     console.log("Backend Error:", error)
+        //     setLoading(false) // Make sure to reset loading on error
+        // }
+
+
         try {
             setLoading(true)
-
-            // const response = await axios.post(`${window.location.origin}/api/v1`, { name, email, subject, message, phone })
             const response = await axios.post("https://myself-api.vercel.app/api/v1", { name, email, subject, message, phone })
-            console.log(response.data)
+            // const response = await axios.post("http://localhost:5000/api/v1", { name, email, subject, message, phone })
             setLoading(false)
 
             if (response.data.success === true) {
-                setSuccessMsg(!successMsg)
-
+                setSuccessMsg(true)  // Show success message
                 setTimeout(() => {
-                    setSuccessMsg(false)
+                    setSuccessMsg(null)  // Hide the message after 3 seconds
                 }, 3000)
-
-
-
             } else {
-                console.log("Something went wrong")
+                setSuccessMsg(false)  // Show error message
+                setTimeout(() => {
+                    setSuccessMsg(null)  // Hide the message after 3 seconds
+                }, 3000)
             }
-
         } catch (error) {
             console.log("Backend Error:", error)
-            setLoading(false) // Make sure to reset loading on error
+            setLoading(false)
+            setSuccessMsg(false)  // In case of an error, show error message
+            setTimeout(() => {
+                setSuccessMsg(null)  // Hide the message after 3 seconds
+            }, 3000)
         }
     }
 
@@ -235,7 +262,7 @@ export default function Contact() {
                                                 : ""
                                             }
                                         </div>
-                                        {
+{/*                                         {
                                             successMsg ?
                                                 <><div className="succussMsg1">
                                                     <div className="succussMsg">
@@ -250,7 +277,18 @@ export default function Contact() {
                                                     </div>
                                                 </div>
                                                 </>
-                                        }
+                                        } */}
+
+                                         {successMsg !== null && (
+                                            <div className="succussMsg1">
+                                                <div className={`succussMsg ${successMsg ? 'success' : 'error'}`}>
+                                                    <p className={`${successMsg ?"":'text-danger'}`}>
+                                                        <i className={`bi ${successMsg ? 'bi-check-circle' : 'bi-x-circle'}`}></i>
+                                                        {successMsg ? ' Your message has been sent. Thank you!' : '  Something went wrong. Please try again!'}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        )}
 
                                     </div>
 
