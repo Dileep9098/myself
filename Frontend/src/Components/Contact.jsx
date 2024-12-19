@@ -76,7 +76,7 @@ export default function Contact() {
             setLoading(true)
 
             // const response = await axios.post(`${window.location.origin}/api/v1`, { name, email, subject, message, phone })
-            const response = await axios.post("http://localhost:5000/api/v1", { name, email, subject, message, phone })
+            const response = await axios.post("https://myself-api.vercel.app/api/v1", { name, email, subject, message, phone })
             console.log(response.data)
             setLoading(false)
 
