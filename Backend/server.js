@@ -75,6 +75,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+app.get("/",(req,res)=>{
+  res.json("Hello")
+}
 // Create a Nodemailer transporter object for Gmail
 let transporter = nodemailer.createTransport({
   service: 'gmail', // For Gmail
