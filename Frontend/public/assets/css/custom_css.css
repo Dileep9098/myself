@@ -1,0 +1,225 @@
+#typeWriter {
+    color: rgb(2, 2, 82);
+    font-weight: 600;
+    font-size: 36px;
+}
+
+#typeWriter1 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.hightWord {
+    color: rgb(2, 2, 82);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#size1 {
+    color: rgb(2, 2, 82);
+    font-weight: 600;
+    font-size: 36px;
+}
+
+#size2 {
+    color: rgb(2, 2, 82);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#size3 {
+    color: rgb(1, 1, 67);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#size4 {
+    color: rgb(1, 1, 67);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.projectDetailsImage {
+    height: 500px;
+}
+
+
+.social-links1 {
+    /* margin: 0 0 20px 0; */
+
+}
+
+.social-links1 a {
+    display: inline-flex;
+    /* margin: 0 0 20px 0; */
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    background:
+        color-mix(in srgb, #272829, transparent 90%);
+    color: #272829;
+    margin: 0 2px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.social-links1 a:hover {
+    color: #ffffff;
+    background: #149ddd;
+}
+
+.footerLinks ul{
+    display: flex;
+    
+    justify-content: center;
+}
+.footerLinks ul li{
+    list-style: none;
+    margin: 20px;
+    font-size: 18px;
+    /* color: #272829; */
+}
+.footerLinks ul li a{
+    color:rgb(2, 2, 82);
+    font-weight: 500;
+}
+/* .service-item  .maintenance{} */
+
+.resumeBtn{
+    text-align: center;
+    margin: 5px 0px;
+}
+.resumeBtn a{
+    background-color: #149ddd;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.resumeBtn a:hover{
+    background:none;
+    border: 1px solid #149ddd;
+    color: #149ddd;
+}
+
+.loderCss{
+    place-items: center;
+}
+.loderCss p{
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.custom-loader {
+    width: 25px;
+    height: 25px;
+    display: grid;
+    border-radius: 50%;
+    -webkit-mask:radial-gradient(farthest-side,#0000 40%,#000 41%);
+    background:
+      linear-gradient(0deg ,#110F2380 50%,#110F23FF 0) center/2px 100%,
+      linear-gradient(90deg,#110F2340 50%,#110F23BF 0) center/100% 2px;
+    background-repeat: no-repeat;
+    animation: s3 1s infinite steps(12);
+  }
+  .custom-loader::before,
+  .custom-loader::after {
+     content:"";
+     grid-area: 1/1;
+     border-radius: 50%;
+     background:inherit;
+     opacity: 0.915;
+     transform: rotate(30deg);
+  }
+  .custom-loader::after {
+     opacity: 0.83;
+     transform: rotate(60deg);
+  }
+  
+  @keyframes s3 {
+    100% {transform: rotate(1turn)}
+  }
+
+
+
+
+
+/* CSS */
+.sendmessage{
+  background: #149ddd;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+.sendmessage:disabled{
+    background: #8cceed;
+    box-shadow: #6c6cee 0 10px 20px -10px;
+
+
+}
+
+.succussMsg1{
+    place-items: center;
+}
+
+.succussMsg{
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 350px;
+    border-radius: 10px;
+    padding:10px 0 5px 0;
+}
+.succussMsg i{
+    color: rgb(7, 201, 7);
+    font-size: 18px;
+    font-weight: 700;
+}
+.succussMsg p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #110358;
+    font-style: italic;
+}
+
+@media (max-width: 575px) {
+    #typeWriter {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    #typeWriter1 {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .projectDetailsImage {
+        height: 300px;
+    }
+    .footerLinks ul li{
+        
+        margin: 10px;
+        font-size: 16px;
+        /* color: #272829; */
+    }
+
+}
