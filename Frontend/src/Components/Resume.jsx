@@ -54,7 +54,7 @@ export default function Resume({totalMonths,totalYears}) {
                         <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                             <h3 className="resume-title" id='size2'>Professional Experience</h3>
                             <div className="resume-item">
-                                <h4>Software Engineer</h4>
+                                <h4>Software Developer</h4>
                                 <h5>Feb 2024 - Present</h5>
                                 <p ><a href="https://www.mobiteqpay.com/"><i class="bi bi-buildings"></i>
                                     <strong id='size4'> Mobiteq Payments Private Limited</strong></a></p>
