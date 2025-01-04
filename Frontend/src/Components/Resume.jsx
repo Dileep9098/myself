@@ -90,7 +90,7 @@ export default function Resume({totalMonths,totalYears}) {
                         </div>
 
                         <div className="resumeBtn">
-                            {/* <Link className='btn btn-primary' download="/assets/img/DileepResume.pdf" to="/assets/img/DileepResume.pdf">Download Resume</Link> */}
+                            {/* <Link className='btn btn-primary' download="/assets/img/DileepResume1.pdf" to="/assets/img/DileepResume.pdf">Download Resume</Link> */}
                             <a href="/assets/img/DileepResume.pdf" className='sendmessage'  download>Download Resume</a>
                         </div>
 
