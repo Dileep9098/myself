@@ -56,8 +56,8 @@ export default function Resume({totalMonths,totalYears}) {
                             <div className="resume-item">
                                 <h4>Software Engineer</h4>
                                 <h5>Feb 2024 - Present</h5>
-                                <p ><a href="https://www.inzealinfotech.in/"><i class="bi bi-buildings"></i>
-                                    <strong id='size4'> Inzeal Infotech Private Limited</strong></a></p>
+                                <p ><a href="https://www.mobiteqpay.com/"><i class="bi bi-buildings"></i>
+                                    <strong id='size4'> Mobiteq Payments Private Limited</strong></a></p>
                                 <p><em><i class="bi bi-geo-alt-fill"></i>
                                     {" "} Noida ,Utter Pradesh</em></p>
                                 <ul>
